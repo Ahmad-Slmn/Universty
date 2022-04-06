@@ -16,6 +16,10 @@
     --padding: 100px
 }
 
+html {
+    scroll-behavior: smooth
+}
+
 .fa-arrow-up {
     position: fixed;
     bottom: 80px;
@@ -29,7 +33,7 @@
     z-index: 9999
 }
 
-img{
+img {
     object-fit: cover
 }
 
@@ -201,8 +205,8 @@ nav .fa {
     br {
         display: none !important
     }
-    
-    p{
+
+    p {
         line-height: 1.7
     }
 
