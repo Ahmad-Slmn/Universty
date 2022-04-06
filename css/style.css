@@ -11,9 +11,26 @@
 }
 
 :root {
-    --transition: .5s;
+    --transition: .4s;
     --main-color: red;
     --padding: 100px
+}
+
+.fa-arrow-up {
+    position: fixed;
+    bottom: 80px;
+    right: 5px;
+    padding: 15px;
+    background-color: var(--main-color);
+    cursor: pointer;
+    border-radius: 15px;
+    color: #fff;
+    display: none;
+    z-index: 9999
+}
+
+img{
+    object-fit: cover
 }
 
 ::placeholder {
@@ -23,6 +40,26 @@
 
 :focus::placeholder {
     opacity: 0
+}
+
+::-webkit-scrollbar {
+    width: 8px
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ff356199;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--main-color);
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ff356199;
+
 }
 
 button:active {
@@ -161,6 +198,14 @@ nav .fa {
         font-size: 20px
     }
 
+    br {
+        display: none !important
+    }
+    
+    p{
+        line-height: 1.7
+    }
+
     nav .links ul {
         padding: 30px;
         width: 100%
@@ -170,10 +215,18 @@ nav .fa {
         display: block;
         border-bottom: 1px solid #ccc;
         text-align: center;
-        padding: 15px;
-
+        padding: 15px
     }
 
+    nav .links ul li a {
+        display: block;
+        transition: var(--transition)
+    }
+
+    nav .links ul li a:hover {
+
+        transform: translateX(5px)
+    }
 
     nav .links {
         position: fixed;
@@ -185,6 +238,11 @@ nav .fa {
         text-align: left;
         z-index: 2;
         transition-duration: var(--transition)
+    }
+
+    nav .links.show {
+
+        right: 0
     }
 
     nav .fa {
@@ -365,6 +423,7 @@ nav .fa {
 
 .testmonials .testmonials-col img {
     height: 40px;
+    width: 40px;
     margin-left: 5px;
     margin-right: 30px;
     border-radius: 50%
@@ -676,4 +735,23 @@ footer i {
 
 .contect-us .contect-col form button:hover {
     color: #fff
+}
+
+@media(max-width:450px) {
+
+    p,
+    .cta h2 {
+        line-height: 1.7 !important;
+        font-size: 10px !important
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 15px;
+        padding: 0
+    }
 }
